@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4844B662671CC4A00F759D7 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4844B652671CC4A00F759D7 /* Deck.swift */; };
 		D492D89F266D2049000923F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D89E266D2049000923F1 /* AppDelegate.swift */; };
 		D492D8A1266D2049000923F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D8A0266D2049000923F1 /* SceneDelegate.swift */; };
 		D492D8A3266D2049000923F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D8A2266D2049000923F1 /* ViewController.swift */; };
 		D492D8A6266D2049000923F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D492D8A4266D2049000923F1 /* Main.storyboard */; };
 		D492D8A8266D204B000923F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D492D8A7266D204B000923F1 /* Assets.xcassets */; };
 		D492D8AB266D204B000923F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D492D8A9266D204B000923F1 /* LaunchScreen.storyboard */; };
+		D492D8B5266D2D25000923F1 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D8B4266D2D25000923F1 /* CardTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4844B652671CC4A00F759D7 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		D492D89B266D2049000923F1 /* Cardify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D492D89E266D2049000923F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D492D8A0266D2049000923F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D492D8A7266D204B000923F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D492D8AA266D204B000923F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D492D8AC266D204B000923F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D492D8B4266D2D25000923F1 /* CardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				D492D89E266D2049000923F1 /* AppDelegate.swift */,
 				D492D8A0266D2049000923F1 /* SceneDelegate.swift */,
 				D492D8A2266D2049000923F1 /* ViewController.swift */,
+				D492D8B4266D2D25000923F1 /* CardTableViewController.swift */,
+				D4844B652671CC4A00F759D7 /* Deck.swift */,
 				D492D8A4266D2049000923F1 /* Main.storyboard */,
 				D492D8A7266D204B000923F1 /* Assets.xcassets */,
 				D492D8A9266D204B000923F1 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D492D8A3266D2049000923F1 /* ViewController.swift in Sources */,
+				D492D8B5266D2D25000923F1 /* CardTableViewController.swift in Sources */,
+				D4844B662671CC4A00F759D7 /* Deck.swift in Sources */,
 				D492D89F266D2049000923F1 /* AppDelegate.swift in Sources */,
 				D492D8A1266D2049000923F1 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WFD78527Q4;
 				INFOPLIST_FILE = Cardify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.IaKras.Cardify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WFD78527Q4;
 				INFOPLIST_FILE = Cardify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.IaKras.Cardify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
