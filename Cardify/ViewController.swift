@@ -9,28 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var isHipStyleActive = false
-    
+    var hipDeck = [Card]()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPurple
-        navigationBarConfigurations()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        //title = isHipStyleActive ?  "hip style": "stack style"
-    }
-    func navigationBarConfigurations(){
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.stack"), style: .plain, target: self, action: #selector(someAction))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.square"), style: .plain, target: self, action: #selector(someAction))
-        navigationItem.leftBarButtonItem?.tintColor = .systemPurple
-        navigationItem.rightBarButtonItem?.tintColor = .systemPurple
-    }
-    @objc func someAction(){
-        isHipStyleActive.toggle()
-        print(isHipStyleActive)
-        if let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "cardTableViewController") as? CardTableViewController{
-            navigationController?.pushViewController(vc, animated: true)}
+        self.navigationController?.isNavigationBarHidden = true
     }
 
+    
+    @IBAction func addCard() {
+        if let vc = storyboard?.instantiateViewController(identifier: "AddingCard") as? AddCardViewController{
+            present(vc, animated: false)
+        }
+    }
+    
 }
 

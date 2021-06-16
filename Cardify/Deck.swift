@@ -11,6 +11,10 @@ enum DeckTypes{
     case main, wellknown, midleKnown, unkowned
 }
 
+enum Cover{
+    case face, back
+}
+
 struct Deck {
     var main       = [Card]()
     
@@ -32,7 +36,7 @@ struct Card {
     var questionString: String
     var ansverString: String
     var id = UUID().uuidString
-    
+    //features soon: image, sounds, themes.
     init(questionString: String = "", ansveringString: String = "") {
         self.questionString = questionString
         self.ansverString = ansveringString

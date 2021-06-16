@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D46EA98A26733111000304C9 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EA98926733111000304C9 /* AddCardViewController.swift */; };
 		D4844B662671CC4A00F759D7 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4844B652671CC4A00F759D7 /* Deck.swift */; };
 		D492D89F266D2049000923F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D89E266D2049000923F1 /* AppDelegate.swift */; };
 		D492D8A1266D2049000923F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D8A0266D2049000923F1 /* SceneDelegate.swift */; };
@@ -14,10 +15,11 @@
 		D492D8A6266D2049000923F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D492D8A4266D2049000923F1 /* Main.storyboard */; };
 		D492D8A8266D204B000923F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D492D8A7266D204B000923F1 /* Assets.xcassets */; };
 		D492D8AB266D204B000923F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D492D8A9266D204B000923F1 /* LaunchScreen.storyboard */; };
-		D492D8B5266D2D25000923F1 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492D8B4266D2D25000923F1 /* CardTableViewController.swift */; };
+		D4DEF5882678746E00530B17 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DEF5872678746E00530B17 /* StackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D46EA98926733111000304C9 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		D4844B652671CC4A00F759D7 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		D492D89B266D2049000923F1 /* Cardify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D492D89E266D2049000923F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +29,7 @@
 		D492D8A7266D204B000923F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D492D8AA266D204B000923F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D492D8AC266D204B000923F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D492D8B4266D2D25000923F1 /* CardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
+		D4DEF5872678746E00530B17 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,8 @@
 				D492D89E266D2049000923F1 /* AppDelegate.swift */,
 				D492D8A0266D2049000923F1 /* SceneDelegate.swift */,
 				D492D8A2266D2049000923F1 /* ViewController.swift */,
-				D492D8B4266D2D25000923F1 /* CardTableViewController.swift */,
+				D4DEF5872678746E00530B17 /* StackViewController.swift */,
+				D46EA98926733111000304C9 /* AddCardViewController.swift */,
 				D4844B652671CC4A00F759D7 /* Deck.swift */,
 				D492D8A4266D2049000923F1 /* Main.storyboard */,
 				D492D8A7266D204B000923F1 /* Assets.xcassets */,
@@ -144,8 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D492D8A3266D2049000923F1 /* ViewController.swift in Sources */,
-				D492D8B5266D2D25000923F1 /* CardTableViewController.swift in Sources */,
+				D46EA98A26733111000304C9 /* AddCardViewController.swift in Sources */,
 				D4844B662671CC4A00F759D7 /* Deck.swift in Sources */,
+				D4DEF5882678746E00530B17 /* StackViewController.swift in Sources */,
 				D492D89F266D2049000923F1 /* AppDelegate.swift in Sources */,
 				D492D8A1266D2049000923F1 /* SceneDelegate.swift in Sources */,
 			);
