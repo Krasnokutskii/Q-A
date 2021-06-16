@@ -25,7 +25,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" image="square.stack" catalog="system"/>
                                 <connections>
-                                    <action selector="hipStackAction" destination="xVc-KD-fda" eventType="touchUpInside" id="rTy-fM-lG2"/>
                                     <segue destination="at8-Rg-1L8" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gwJ-JK-LRB"/>
                                 </connections>
                             </button>
