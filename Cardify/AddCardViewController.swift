@@ -9,10 +9,10 @@ import UIKit
 
 class AddCardViewController: UIViewController {
 
+    var rootVC: VC!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func backTapped() {
@@ -20,7 +20,11 @@ class AddCardViewController: UIViewController {
     }
     
     @IBAction func addTapped() {
-        print("aaaa")
+        if rootVC == .hip{
+            print("adding to hip")
+        }else{
+            print("adding to stack")
+        }
     }
     
     /*

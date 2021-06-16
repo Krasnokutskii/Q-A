@@ -19,9 +19,13 @@ class ViewController: UIViewController {
     
     @IBAction func addCard() {
         if let vc = storyboard?.instantiateViewController(identifier: "AddingCard") as? AddCardViewController{
+            vc.rootVC = .hip
             present(vc, animated: false)
         }
     }
     
 }
 
+enum VC{
+    case stack, hip
+}

@@ -11,7 +11,7 @@ class StackViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .systemPink
         // Do any additional setup after loading the view.
     }
     
@@ -22,6 +22,7 @@ class StackViewController: UIViewController {
     
     @IBAction func addCardtoStack() {
         if let vc = storyboard?.instantiateViewController(identifier: "AddingCard") as? AddCardViewController{
+            vc.rootVC = .stack
             present(vc, animated: true)
         }
     }
