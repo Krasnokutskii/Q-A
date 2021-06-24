@@ -33,12 +33,12 @@ struct Deck {
 }
 
 struct Card {
-    var questionString: String
-    var ansverString: String
+    var frontSideText: String
+    var backSideText: String
     var id = UUID().uuidString
     //features soon: image, sounds, themes.
-    init(questionString: String = "", ansveringString: String = "") {
-        self.questionString = questionString
-        self.ansverString = ansveringString
+    init(frontSideText: String, backSideText: String) {
+        self.frontSideText = frontSideText
+        self.backSideText = backSideText
     }
 }
