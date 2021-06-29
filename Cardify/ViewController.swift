@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var hipDeck = [Card]()
+    var cardButton: CardButton!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     }
     
     func configureCardButton(){
-        let cardButton = CardButton(frame: CGRect(x: 0, y: 0, width: 250, height: 350))
+        cardButton = CardButton(frame: CGRect(x: 0, y: 0, width: 250, height: 350))
         view.addSubview(cardButton)
         cardButton.center = view.center
         cardButton.configure(with:Card(frontSideText: "question", backSideText: "ansver") )
@@ -37,7 +38,9 @@ class ViewController: UIViewController {
     }
     
     @objc func cardButtonTapped() {
-        print("show back/front")
+        
+        cardButton.flipCard()
+        UIButton.transition(with: cardButton, duration: 0.35, options: .transitionFlipFromLeft, animations: nil, completion: nil)
     }
     @objc func moveCardTo(sender: UISwipeGestureRecognizer){
         print("move to ")

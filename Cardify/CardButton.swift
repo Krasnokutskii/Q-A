@@ -6,14 +6,16 @@
 //
 
 import UIKit
-struct CardModel {
-    var frontSideText: String
-    var backSideText: String
-}
+
 
 final class CardButton: UIButton {
-
-    private let frontLabel: UILabel = {
+    
+    var isFaceUp = false
+    var label: UILabel!
+    var faceCardBackgroundColor = UIColor.purple
+    var backCardBackgroundColor = UIColor.red
+    
+    private let faceLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
         label.textAlignment = .center
@@ -34,8 +36,9 @@ final class CardButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(frontLabel)
-        addSubview(backLabel)
+        label = faceLabel
+        addSubview(label)
+       // addSubview(backLabel)
         clipsToBounds = true
         layer.cornerRadius = 20
         layer.borderWidth = 2
@@ -47,14 +50,29 @@ final class CardButton: UIButton {
         fatalError()
     }
     
+    func flipCard(){
+        print("flip")
+        
+        if isFaceUp{
+            isFaceUp.toggle()
+            label = faceLabel
+            
+        }else{
+            isFaceUp.toggle()
+            label = backLabel
+        }
+    }
+    
     func configure(with card: Card ){
-        frontLabel.text = card.frontSideText
+        faceLabel.text = card.frontSideText
         backLabel.text = card.backSideText
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        frontLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/2)
-        backLabel.frame = CGRect(x: 0 , y: frame.size.height/2, width: frame.size.width, height: frame.size.height/2)
+        label.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/2)
+       // label.center = self.center
+//        faceLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/2)
+//        backLabel.frame = CGRect(x: 0 , y: frame.size.height/2, width: frame.size.width, height: frame.size.height/2)
     }
 }
