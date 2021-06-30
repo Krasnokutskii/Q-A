@@ -19,14 +19,18 @@ class ViewController: UIViewController {
     }
     
     func configureCardButton(){
-        cardButton = CardButton(frame: CGRect(x: 0, y: 0, width: 250, height: 350))
-        cardButton.configure(with:Card(frontSideText: "question", backSideText: "ansver") )
-        view.addSubview(cardButton)
+        cardButton = CardButton(frame: CGRect(x: 0, y: 0, width: 250, height: 350), card: Card(frontSideText: "question", backSideText: "ansver"))
+        //cardButton.configure(with:Card(frontSideText: "question", backSideText: "ansver") )
         cardButton.center = view.center
         cardButton.addTarget(self, action: #selector(cardButtonTapped), for: .touchUpInside)
+        
+        //swips
         let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action:#selector(moveCardTo))
         swipeGestureRecognizer.direction = .down
         cardButton.addGestureRecognizer(swipeGestureRecognizer)
+        cardButton.setNeedsDisplay()
+        view.addSubview(cardButton)
+        
     }
 
     

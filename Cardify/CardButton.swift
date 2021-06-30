@@ -11,7 +11,7 @@ import UIKit
 final class CardButton: UIButton {
     
     var isFaceUp = false
-    var label: UILabel!
+    var label = UILabel()
     var faceText = ""
     var backText = ""
     var faceCardBackgroundColor = UIColor.purple
@@ -28,9 +28,25 @@ final class CardButton: UIButton {
 
     
     
-    override init(frame: CGRect) {
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        //label = UILabel()
+//        //label.text = backText
+//        configureLabel()
+//        addSubview(label)
+//        clipsToBounds = true
+//        layer.cornerRadius = 20
+//        layer.borderWidth = 2
+//        layer.borderColor = UIColor.secondarySystemBackground.cgColor
+//        backgroundColor = .systemGreen
+//    }
+    
+    required init(frame: CGRect, card: Card) {
+            // set myValue before super.init is called
+        faceText = card.frontSideText
+        backText = card.backSideText
+        label.text = backText
         super.init(frame: frame)
-        label = UILabel()
         configureLabel()
         addSubview(label)
         clipsToBounds = true
@@ -38,8 +54,18 @@ final class CardButton: UIButton {
         layer.borderWidth = 2
         layer.borderColor = UIColor.secondarySystemBackground.cgColor
         backgroundColor = .systemGreen
+
+            // set other operations after super.init, if required
     }
+
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    
     func configureLabel(){
+        
+        //label.text = backText
+        print("configurelabel \(label.text)")
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = .systemYellow
@@ -47,9 +73,9 @@ final class CardButton: UIButton {
         label.text = backText
     }
     
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
+//    required init?(coder: NSCoder) {
+//        fatalError()
+//    }
     
     func flipCard(){
         print("flip \(String(describing: label.text))")
@@ -68,6 +94,7 @@ final class CardButton: UIButton {
     func configure(with card: Card ){
         faceText = card.frontSideText
         backText = card.backSideText
+        print("configure")
     }
     
     override func layoutSubviews() {
