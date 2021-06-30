@@ -99,7 +99,7 @@ final class CardButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        label.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/2)
+        label.frame = CGRect(x: 0, y: frame.size.height/4, width: frame.size.width, height: frame.size.height/2)
        // label.center = self.center
 //        faceLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/2)
 //        backLabel.frame = CGRect(x: 0 , y: frame.size.height/2, width: frame.size.width, height: frame.size.height/2)
