@@ -12,38 +12,39 @@ final class CardButton: UIButton {
     
     var isFaceUp = false
     var label: UILabel!
+    var faceText = ""
+    var backText = ""
     var faceCardBackgroundColor = UIColor.purple
     var backCardBackgroundColor = UIColor.red
     
-    private let faceLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 2
-        label.textAlignment = .center
-        label.textColor = .systemYellow
-        label.font = .systemFont(ofSize: 34, weight: .light)
-        return label
-    }()
-    
-    private let backLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 2
-        label.textAlignment = .center
-        label.textColor = .systemYellow
-        label.font = .systemFont(ofSize: 34, weight: .light)
-        return label
-    }()
+//    private let faceLabel: UILabel = {
+//        let label = UILabel()
+//        label.numberOfLines = 2
+//        label.textAlignment = .center
+//        label.textColor = .systemYellow
+//        label.font = .systemFont(ofSize: 34, weight: .light)
+//        return label
+//    }()
+
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        label = faceLabel
+        label = UILabel()
+        configureLabel()
         addSubview(label)
-       // addSubview(backLabel)
         clipsToBounds = true
         layer.cornerRadius = 20
         layer.borderWidth = 2
         layer.borderColor = UIColor.secondarySystemBackground.cgColor
         backgroundColor = .systemGreen
+    }
+    func configureLabel(){
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = .systemYellow
+        label.font = .systemFont(ofSize: 34, weight: .light)
+        label.text = backText
     }
     
     required init?(coder: NSCoder) {
@@ -51,21 +52,22 @@ final class CardButton: UIButton {
     }
     
     func flipCard(){
-        print("flip")
+        print("flip \(String(describing: label.text))")
+    
         
         if isFaceUp{
             isFaceUp.toggle()
-            label = faceLabel
+            label.text = backText
             
         }else{
             isFaceUp.toggle()
-            label = backLabel
+            label.text = faceText
         }
     }
     
     func configure(with card: Card ){
-        faceLabel.text = card.frontSideText
-        backLabel.text = card.backSideText
+        faceText = card.frontSideText
+        backText = card.backSideText
     }
     
     override func layoutSubviews() {
