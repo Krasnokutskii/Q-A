@@ -10,7 +10,9 @@ import UIKit
 class AddCardViewController: UIViewController {
 
     var rootVC: VC!
-        
+    var questionField = ""
+    var ansverField = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,8 +22,10 @@ class AddCardViewController: UIViewController {
     }
     
     @IBAction func addTapped() {
+       // let clousure: () -> Card = {Card(frontSideText: self.questionField, backSideText: self.ansverField)}
         if rootVC == .hip{
             print("adding to hip")
+            
         }else{
             print("adding to stack")
         }

@@ -7,28 +7,26 @@
 
 import Foundation
 
-enum DeckTypes{
-    case main, wellknown, midleKnown, unkowned
-}
+
 
 enum Cover{
     case face, back
 }
-
-struct Deck {
-    var main       = [Card]()
+enum DeckType{
+    case main, wellknown, midleKnown, unkowned
+}
+final class Deck {
+    private(set) var main       = [Card]()
+    private(set) var wellknown  = [Card]()
+    private(set) var midleKnown = [Card]()
+    private(set) var unknown    = [Card]()
     
-    var wellknown  = [Card]()
-    var midleKnown = [Card]()
-    var unknown    = [Card]()
     
-    init(deckType: DeckTypes, card: Card ) {
-        switch deckType {
-        case .main:
-            main.append(card)
-        default:
-            print("default")
-        }
+    
+    
+    
+    func addToMain(card: Card){
+        main.append(card)
     }
 }
 

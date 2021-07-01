@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HipViewController.swift
 //  Cardify
 //
 //  Created by Ярослав on 6/6/21.
@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HipViewController: UIViewController {
 
-    var hipDeck = [Card]()
+    var deck = Deck()
+    lazy var cards = deck.main
     var cardButton: CardButton!
         
     override func viewDidLoad() {

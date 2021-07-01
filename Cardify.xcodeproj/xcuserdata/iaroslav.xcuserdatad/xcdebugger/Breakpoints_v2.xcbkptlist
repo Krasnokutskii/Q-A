@@ -14,8 +14,8 @@
             filePath = "Cardify/CardButton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "flipCard()"
             landmarkType = "7">
          </BreakpointContent>

@@ -27,20 +27,6 @@ final class CardButton: UIButton {
 //    }()
 
     
-    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        //label = UILabel()
-//        //label.text = backText
-//        configureLabel()
-//        addSubview(label)
-//        clipsToBounds = true
-//        layer.cornerRadius = 20
-//        layer.borderWidth = 2
-//        layer.borderColor = UIColor.secondarySystemBackground.cgColor
-//        backgroundColor = .systemGreen
-//    }
-    
     required init(frame: CGRect, card: Card) {
             // set myValue before super.init is called
         faceText = card.frontSideText
@@ -65,7 +51,7 @@ final class CardButton: UIButton {
     func configureLabel(){
         
         //label.text = backText
-        print("configurelabel \(label.text)")
+        //print("configurelabel \(label.text)")
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = .systemYellow
